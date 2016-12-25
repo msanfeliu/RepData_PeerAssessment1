@@ -1,6 +1,6 @@
 # Reproducible Research: Peer Assessment 1
 
-This document has all steps taken to fulfill the assignment
+This document has all steps taken to fulfill the first class assignment
 
 ##Loading and preprocessing the data
 
