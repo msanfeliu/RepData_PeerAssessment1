@@ -1,5 +1,6 @@
 # Reproducible Research: Peer Assessment 1
 
+This document has all steps taken to fulfill the assignment
 
 ##Loading and preprocessing the data
 
@@ -37,7 +38,7 @@ total_steps<-tapply(activity$steps,activity$date,sum, rm.na=TRUE)
 
 
 ```r
-hist(total_steps, main = "Histogram of steps taken each day", xlab = "steps per day", axes = TRUE, breaks=10)
+hist(total_steps, main = "Histogram of steps taken each day ", xlab = "steps per day", axes = TRUE, breaks=10)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
@@ -66,7 +67,7 @@ x<-activity[x,]
 x2<-tapply(x$steps,x$interval,mean, rm.na=TRUE)
 z<-names(x2)
 x2<-as.data.frame(x2)
-plot(x2, type = "l", xlab = "5-minute interval", main = "Average number of steps per 5-minute interval", ylab= "average number of steps")
+plot(x2, type = "l", xlab = "5-minute interval", main = "Average number of steps per 5-minute interval", ylab= "Average number of steps")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
@@ -131,7 +132,7 @@ for (i in 1:nrow(activity2)) {
 
 ```r
 total_steps2<-tapply(activity2$steps,activity2$date,sum, rm.na=TRUE)
-hist(total_steps2, main = "Histogram of steps taken each day", xlab = "steps per day", axes = TRUE, breaks=10)
+hist(total_steps2, main = "Histogram of steps taken each day", xlab = "Steps per day", axes = TRUE, breaks=10)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
@@ -232,7 +233,7 @@ library(lattice)
 ```
 
 ```r
-xyplot(mean_steps~Interval|day$Day, day, main="Average number of steps by interval", xlab="Interval", layout=c(1,2), type='l') 
+xyplot(mean_steps~Interval|day$Day, day, main="Average number of steps by 5-minute interval", xlab="Interval", ylab="Average number of steps", layout=c(1,2), type='l') 
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
